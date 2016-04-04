@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Pomodoro</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+  <link href="css/jquery-ui.structure.min.css" rel="stylesheet">
+  <link href="css/jquery-ui.theme.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/PomodoroStyle.css">
+  
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+  <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+  <script src="js/moment.js"></script>
+  <script src="js/PomodoroScript.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="well">
+      <h3 class="bld">Pomodoro</h3>
+      <!--<div>Time remaining: 10:00</div>
+      <div>I have worked for: 10:00</div>
+      <div>I have rested for: 10:00</div>
+      <hr>
+      <div class="ui-widget">
+        <label>Working on:</label>
+        <input id="workItem">
+      </div>
+      <div class="row">
+        <div class="col-md-4 col-sm-6">
+          <label>Activity Type: </label>
+          <select class="selectmenu">
+            <option selected="selected">Coding</option>
+            <option>Writing Paper</option>
+            <option>Reading</option>
+            <option>Work Out</option>
+          </select>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <label>Importance: </label>
+          <select class="selectmenu">
+            <option>Urgent</option>
+            <option selected="selected">Important</option>
+            <option>UI Both</option>
+            <option>UI None</option>
+          </select>
+        </div>
+      </div>-->
+      <div class="row scheduleArea">
+        <div class="col-xs-6 ltAlign">
+          Todo List
+          <div id="todoList" class="well">
+            <div class="ui-state-default row listItem">
+              <a href="#">
+                <div class="col-xs-9">Item 0</div>
+                <div class="col-xs-2 delIcon">
+                  <span class="glyphicon glyphicon-trash"></span>
+                </div>
+              </a>
+            </div>
+            <div class="ui-state-default row listItem">
+              <a href="#">
+                <div class="col-xs-9">Item 1</div>
+                <div class="col-xs-2 delIcon">
+                  <span class="glyphicon glyphicon-trash"></span>
+                </div>
+              </a>
+            </div>
+            <div class="ui-state-default row listItem">
+              <a href="#">
+                <div class="col-xs-9">Item 2</div>
+                <div class="col-xs-2 delIcon">
+                  <span class="glyphicon glyphicon-trash"></span>
+                </div>
+              </a>
+            </div>
+            <div class="ui-state-default row listItem">
+              <a href="#">
+                <div class="col-xs-9">Item 3</div>
+                <div class="col-xs-2 delIcon">
+                  <span class="glyphicon glyphicon-trash"></span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-6 ltAlign">
+          Today's Schedule
+          <div id="schedule" class="well">
+            <div class="ui-state-default row listItem">
+              <a href="#">
+                <div class="col-xs-9">Item 1</div>
+                <div class="col-xs-2 delIcon">
+                  <span class="glyphicon glyphicon-trash"></span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="pomodoroType">
+        <ul>
+          <li><a href="#fixed">Fixed Time</a></li>
+          <li><a href="#flexible">Flexible Time</a></li>
+        </ul>
+        <div id="fixed" class="row">
+          <div id="timeLength" class="col-lg-8 col-md-6 col-sm-10"></div>
+          <label id="timeLengthLabel" class="col-lg-1 col-md-2 col-sm-2"></label>
+          <div class="col-lg-3 col-md-4">
+            <button id="startFixed">Start</button>
+            <button id="giveUp">Give up</button>
+          </div>
+        </div>
+        
+        <div id="flexible">
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col-xs-6 ltAlign">
+          <button id="settings">
+            <span class="glyphicon glyphicon-cog"></span>
+            Settings
+          </button>
+        </div>
+        <div class="col-xs-6 rtAlign">
+          <button id="statistics">
+            <span class="glyphicon glyphicon-stats"></span>
+            Statistics
+          </button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</body>
+</html>

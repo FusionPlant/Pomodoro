@@ -1,0 +1,125 @@
+/* overwritting bootstrap */
+/* remove the blue border around button when clicked in chrome */
+.btn.active.focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn:active:focus, .btn:focus {
+  outline: none;
+}
+.ui-state-focus {
+  outline: none;
+}
+a:focus { 
+  outline: none;
+}
+
+/* overwritting jquery ui */
+.ui-widget {
+  font-size: 17px;
+}
+
+/* addition to jquery ui */
+.selectmenu {
+  width: 150px;
+}
+.ui-selectmenu-button {
+  top: 14px;
+}
+.place-holder {
+  background-color: darkgrey;
+}
+
+/* media query */
+@media screen and (max-width: 600px) {
+    .hideOnPhone {
+        display: none;
+    }
+}
+
+/* cutomize style */
+body {
+  background-color: #174965;
+  text-align: center;
+  font-family: Arial, Sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  padding-top: 10px;
+}
+hr {
+  border-color: #DDDDDD;
+}
+
+/* small style */
+.ltAlign {
+  text-align: left;
+}
+.rtAlign {
+  text-align: right;
+}
+.btMargin10 {
+  margin-bottom: 10px;
+}
+.rtMargin25 {
+  margin-right: 25px;
+}
+.no-padding {
+  margin-left: 0px;
+  margin-right: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.bld {
+  font-weight: bold;
+}
+.noDisplay {
+  display: none;
+}
+
+
+
+/* pomodoro specific */
+.scheduleArea {
+  min-height: 200px;
+  margin: 0px 10px 0px 10px;
+}
+.listItem {
+  padding-top: 5px;
+  padding-bottom: 25px;
+  margin: 0px -10px 5px -10px;
+  height: 1.5em;
+}
+.delIcon {
+  padding-right: 0px;
+  text-align: right;
+}
+
+#todoList {
+  min-height: 180px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  background-color: #0B3E6F;
+}
+#schedule {
+  min-height: 180px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  background-color: #0B3E6F;
+}
+
+#workItem {
+  width: 200px;
+  padding-left: 5px;
+}
+#pomodoroType {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+}
+#startFixed, #giveUp {
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 5px;
+}
+#timeLength {
+  margin-top: 13px;
+}
+#timeLengthLabel {
+  margin-top: 10px;
+}
